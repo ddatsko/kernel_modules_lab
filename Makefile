@@ -21,12 +21,12 @@ PHONY: all
 all: default
 
 default:
-        $(MAKE) -C $(KDIR) M=$(PWD) modules
+	$(MAKE) -C $(KDIR) M=$(PWD) modules
 
 clean:
-        @rm -f *.o *.cmd *.flags *.mod.c *.order
-        @rm -f .*.*.cmd *~ *.*~ TODO.*
-        @rm -fR .tmp*
+	@rm -f *.o *.cmd *.flags *.mod.c *.order
+	@rm -f .*.*.cmd *~ *.*~ TODO.*
+	@rm -fR .tmp*
 
 disclean: clean
-        @rm *.ko *.symvers
+	@rm *.ko *.symvers
